@@ -3,6 +3,8 @@
     #) After the options are parsed, shift is used to remove them from the arguments, leaving the search string and file.
     #) The script then checks that the two arguments are provided and that the file exists.
 
-2) If I were to support regex, -i, -c, or -l, I would handle the pattern matching and options manually within the script. For regex support, I would utilize shell pattern matching or use [[ ... ]] with =~ for regular expression matching. and the option -i is already supported by default since the script is case-insensitive. To support -c option I would count the number of matches found by incrementing a counter each time a line matches the pattern. To support the -l option, I would store the filenames that contain at least one match and echo them at the end.
+2) If I were to support regex, -i, -c, or -l, I would handle the pattern matching and options manually within the script. For regex support, I would utilize shell pattern matching or use [[ ... ]] with =~ for regular expression matching.
+and the option -i is already supported by default since the script is case-insensitive. To support -c option I would count the number of matches found by incrementing a counter each time a line matches the pattern. 
+To support the -l option, I would store the filenames that contain at least one match and echo them at the end.
    
 3) The hardest part of the script was implementing the search logic because it contained nested conditions.
